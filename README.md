@@ -1,23 +1,20 @@
 # ✈️ AirFly Insights – Airline Operations Data Analytics
 
-![Project Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)
 
 ---
 
-# Abstract
+## Abstract
 
-Airline operations generate massive volumes of data including flight schedules, delays, cancellations, and operational disruptions. Extracting meaningful insights from this data is essential for improving airline efficiency, reducing delays, and enhancing passenger experience.
+Airline operations generate massive volumes of operational data including flight schedules, delays, cancellations, and operational disruptions. Extracting insights from such datasets is essential for improving airline efficiency and reducing delays.
 
-The **AirFly Insights** project presents a structured analytical workflow for exploring airline operational datasets using Python-based data analytics techniques. The project performs data cleaning, feature engineering, and exploratory analysis to identify delay patterns, airline performance trends, and route-level congestion.
-
-The analysis transforms raw flight data into actionable insights that can support airline operations management and aviation analytics systems.
+The **AirFly Insights** project performs structured data analytics on airline operational data using Python. The workflow includes data cleaning, feature engineering, exploratory analysis, and visualization to uncover delay patterns and airline performance trends.
 
 ---
 
-# Table of Contents
+## Table of Contents
 
 * Introduction
 * Problem Statement
@@ -35,46 +32,40 @@ The analysis transforms raw flight data into actionable insights that can suppor
 
 ---
 
-# Introduction
+## Introduction
 
-The aviation industry relies heavily on operational analytics to monitor airline performance and detect inefficiencies. Flight delays and cancellations create economic losses for airlines and inconvenience passengers.
+The aviation industry relies heavily on operational analytics to monitor airline performance and detect inefficiencies. Flight delays and cancellations create economic losses and operational challenges.
 
-Airline data analytics helps identify:
-
-• congestion patterns
-• operational bottlenecks
-• route inefficiencies
-• airline delay behavior
-
-This project simulates a real-world data analytics workflow used in airline operations monitoring and business intelligence systems.
+This project demonstrates how airline datasets can be transformed into structured insights through data analytics techniques.
 
 ---
 
-# Problem Statement
+## Problem Statement
 
-Airline datasets contain large volumes of operational records that are often noisy and incomplete. Without structured preprocessing and analysis, deriving meaningful insights becomes difficult.
+Airline datasets contain large volumes of operational records that are often noisy and incomplete. Without proper preprocessing and analysis, extracting meaningful insights becomes difficult.
 
-The primary objective of this project is to transform raw airline flight data into an analysis-ready dataset and explore patterns related to:
+The goal of this project is to analyze airline operational data to identify:
 
-• airline delay behavior
-• flight cancellation patterns
-• airport traffic congestion
-• seasonal flight trends
-• route-level operational performance
+* airline delay behavior
+* cancellation patterns
+* airport congestion
+* seasonal flight trends
+* route performance
 
 ---
 
-# Dataset Description
+## Dataset Description
 
-The dataset used in this project contains airline operational records including:
+The dataset contains airline flight operation records including:
 
-• flight dates
-• airline identifiers
-• origin and destination airports
-• departure delays
-• arrival delays
-• cancellation indicators
-• delay causes such as carrier delays, weather delays, NAS delays, security delays, and late aircraft delays
+* flight dates
+* airline identifiers
+* origin airports
+* destination airports
+* departure delays
+* arrival delays
+* cancellation indicators
+* delay causes (carrier, weather, NAS, security, late aircraft)
 
 Dataset Source:
 
@@ -82,87 +73,81 @@ https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset
 
 ---
 
-# Technology Stack
+## Technology Stack
 
-The analytical workflow was implemented using the following technologies:
-
-Python – core programming language for data analysis
-Pandas – data manipulation and preprocessing
-NumPy – numerical computation
-Matplotlib – visualization
-Seaborn – statistical visualization
-Jupyter Notebook – interactive analysis environment
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
 
 ---
 
-# Project Architecture
+## Project Architecture
 
-The project follows a structured analytics pipeline.
-
-Raw Flight Dataset
-↓
-Data Cleaning and Preprocessing
-↓
+```
+Raw Flight Data
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
 Feature Engineering
-↓
+      │
+      ▼
 Exploratory Data Analysis
-↓
-Visualization and Insight Generation
-↓
-Operational Interpretation
+      │
+      ▼
+Visualization & Insights
+```
 
 ---
 
-# Methodology
+## Methodology
 
-## Data Foundation
+### Data Foundation
 
-The first stage involves understanding the dataset structure:
+Initial dataset exploration includes:
 
-• loading the dataset
-• inspecting dataset schema
-• checking column data types
-• identifying missing values
-• creating smaller samples for analysis
+* loading dataset
+* checking dataset shape
+* inspecting column data types
+* identifying missing values
 
-## Data Cleaning
+### Data Cleaning
 
 Cleaning steps include:
 
-• handling missing delay values
-• removing inconsistent records
-• converting date fields to datetime format
-• checking duplicate records
+* handling missing delay values
+* removing duplicate records
+* converting date fields to datetime
 
-## Feature Engineering
+### Feature Engineering
 
-New analytical features were created to support analysis.
+New features created for analysis:
 
-| Feature   | Description                                    |
-| --------- | ---------------------------------------------- |
-| Month     | Extracted from flight date                     |
-| DayOfWeek | Day of week derived from flight date           |
-| Hour      | Departure hour extracted from time             |
-| Route     | Combination of origin and destination airports |
+| Feature   | Description                |
+| --------- | -------------------------- |
+| Month     | extracted from flight date |
+| DayOfWeek | day of week from date      |
+| Hour      | departure hour             |
+| Route     | origin + destination       |
 
-These features allow analysis of airline performance across time and routes.
+### Exploratory Data Analysis
 
-## Exploratory Data Analysis
+Analysis includes:
 
-The project explores patterns such as:
-
-• airline flight frequency
-• delay distribution
-• delay causes
-• airport activity levels
-• seasonal flight trends
-
-Visualizations help identify structural inefficiencies in airline operations.
+* airline flight frequency
+* delay distribution
+* monthly flight trends
+* delay cause analysis
 
 ---
 
-# Repository Structure
+## Repository Structure
 
+```
 AirFly-Insights
 │
 ├── data
@@ -186,91 +171,81 @@ AirFly-Insights
 │
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
-# Sample Visualizations
+## Sample Visualizations
 
-## Airline Delay Comparison
+### Airline Delay Comparison
 
 ![Airline Performance](visuals/airline_performance.png)
 
-## Monthly Flight Trends
+### Monthly Flight Trends
 
 ![Monthly Trends](visuals/monthly_trend.png)
 
-## Delay Distribution
+### Delay Distribution
 
 ![Delay Distribution](visuals/delay_distribution.png)
 
 ---
 
-# Key Insights
+## Key Insights
 
-Preliminary analysis of the airline dataset reveals several operational patterns.
+Preliminary analysis shows:
 
-• Some airlines show consistently higher average delay values.
-• Late aircraft delays contribute significantly to overall delay patterns.
-• Seasonal travel periods increase flight congestion and delay frequency.
-• Certain high-traffic routes demonstrate higher operational risk for delays.
-
-These insights highlight the importance of analytics in optimizing airline scheduling and airport traffic management.
+* Some airlines show higher average delays.
+* Late aircraft delays significantly impact operations.
+* Seasonal travel periods increase congestion.
+* High traffic routes have higher delay probability.
 
 ---
 
-# Industry Applications
+## Industry Applications
 
-The analytical framework demonstrated in this project can support several real-world aviation analytics applications:
+The analytical framework can support:
 
-• airline operational monitoring systems
-• delay prediction models
-• airport congestion analytics
-• flight scheduling optimization
-• aviation business intelligence dashboards
+* airline operations monitoring
+* delay prediction systems
+* airport congestion analysis
+* aviation business intelligence dashboards
 
 ---
 
-# Installation
+## Installation
 
-Clone the repository:
+Clone the repository
 
-git clone https://github.com/rson7770/AirFly-Insights.git
+git clone https://github.com/yourusername/AirFly-Insights.git
 
-Navigate to project folder:
+Go to project directory
 
 cd AirFly-Insights
 
-Install dependencies:
+Install dependencies
 
 pip install -r requirements.txt
 
-Run Jupyter Notebook:
+Run Jupyter Notebook
 
 jupyter notebook
 
 ---
 
-# Future Work
+## Future Work
 
-Future enhancements may include:
+Possible extensions:
 
-• machine learning models for delay prediction
-• airline performance ranking models
-• interactive dashboards using Power BI or Tableau
-• network analysis of airport connectivity
-• real-time aviation analytics systems
+* machine learning models for delay prediction
+* airline performance ranking
+* interactive dashboards
+* real-time flight analytics
 
 ---
 
-# Author
+## Author
 
 Robinson
-
-M.Tech – Data Science
+M.Tech Data Science
 Jaypee University of Information Technology
-
----
-
-# License
-
-This project is developed for academic and portfolio purposes.
